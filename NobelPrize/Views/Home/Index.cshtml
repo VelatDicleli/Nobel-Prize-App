@@ -1,0 +1,66 @@
+﻿@model List<Candidate>
+
+
+    
+    <style>
+        .table-container {
+            margin-top: 20px;
+        }
+
+        .table thead th {
+        background-color: #4600FF;
+            color: white;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+    </style>
+@await Component.InvokeAsync("Candidate")
+
+    <h2>Candidates</h2>
+
+
+    <div class="container table-container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Candidate Id</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Nationality</th>
+                    <th scope="col">Field of Science</th>
+                    <th scope="col">Candidacy Number</th>
+                    <th scope="col">Candidacy Date</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var candidate in Model)
+                {
+                    <tr>
+                        <td>@candidate.CandidateId</td>
+                        <td>@candidate.FirstName</td>
+                        <td>@candidate.LastName</td>
+                        <td>@candidate.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                        <td>@candidate.Nationality</td>
+                        <td>@candidate.FieldOfScience</td>
+                        <td>@candidate.CandidacyNumber</td>
+                        <td>@candidate.CandidacyDate.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-primary" asp-action="GetCandidateDetails" asp-route-id="@candidate.CandidateId">Details</a>
+                        <a class="btn btn-sm btn-outline-danger" asp-action="RemoveCandidate" asp-route-id="@candidate.CandidateId">Remove</a>
+                        <a class="btn btn-sm btn-outline-info" asp-action="UpdateCandidate" asp-route-id="@candidate.CandidateId">Edit</a>
+                    </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+

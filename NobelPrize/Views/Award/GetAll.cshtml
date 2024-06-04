@@ -1,0 +1,42 @@
+﻿@model List<Award>
+
+<style>
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .table thead th {
+        background-color: #4600FF;
+        color: white;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+<h2>Awards</h2>
+<a class="btn btn-success" asp-action="Create">Create an Award</a>
+<div class="table-container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Descriptor Name</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.DescriptorName</td>
+                    <td>@item.Category</td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-info" asp-action="Edit" asp-route-id="@item.AwardId">Edit</a>
+                        <a class="btn btn-sm btn-outline-danger" asp-action="Remove" asp-route-id="@item.AwardId">Remove</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+﻿@model OrganizationViewModel
+
+<form asp-controller="Organization" asp-action="Create" method="post">
+
+    <div class="form-group my-3">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="Location"></label>
+        <input class="form-control" asp-for="Location">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="ContactInformation"></label>
+        <input class="form-control" asp-for="ContactInformation" />
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">
+            Add
+        </button>
+    </div>
+
+
+</form>

@@ -1,0 +1,56 @@
+﻿@model List<Expert>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    th[scope="col"] {
+        background-color: #4600FF;
+        color: white;
+    }
+</style>
+<h2>Experts</h2>
+<a class="btn btn-success" asp-action="Create"> Add a new Expert</a>
+<table>
+    <thead>
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Field</th>
+            <th scope="col">Committee Category</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ExpertFirstName</td>
+                <td>@item.ExpertLastName</td>
+                <td>@item.ExpertField</td>
+                <td>@item.Committee.CommitteeCategory</td>
+                <td>
+                    <a class="btn btn-sm btn-outline-danger" asp-controller="Expert" asp-action="Remove" asp-route-id="@item.ExpertId">Remove</a>
+                    <a class="btn btn-sm btn-outline-primary" asp-controller="Expert" asp-action="Edit" asp-route-id="@item.ExpertId">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+﻿@using Entities.Parameters
+<div class="my-3">
+    <h6 class="lead">
+        <i class="fa fa-filter text-secondary"></i>
+        Filters
+    </h6>
+</div>
+
+
+<div class="col-3 my-2">
+    <form method="get" asp-action="Index">
+
+
+        <div class="form-group my-2">
+            <input class="form-control" name="FirstName" placeholder="FirstName" />
+        </div>
+        <div class="form-group my-2">
+            <input class="form-control" name="LastName" placeholder="LastName" />
+        </div>
+        <div class="form-group my-2">
+            <input class="form-control" type="number" name="CandidacyNumber" placeholder="CandidacyNumber" />
+        </div>
+        <div class="form-group my-2">
+            <input class="form-control" name="Nationality" placeholder="Nationality" />
+        </div>
+        
+        <div class="form-group my-2">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a class="btn btn-success" asp-action="CreateCandidate">Add a new candidate</a>
+        </div>
+
+    </form>
+</div>

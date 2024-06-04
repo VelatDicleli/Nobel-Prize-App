@@ -1,0 +1,73 @@
+﻿@model CreateCandidateViewModel
+
+<form asp-action="CreateCandidate" method="post">
+    
+
+    <div class="form-group my-3">
+        <label asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="LastName"></label>
+        <input class="form-control" asp-for="LastName">
+    </div>
+    <div class="form-group my-3">
+        <label asp-for="Nationality"></label>
+        <input class="form-control" asp-for="Nationality">
+    </div>
+    <div class="form-group my-3">
+        <label asp-for="FieldOfScience"></label>
+        <input class="form-control" asp-for="FieldOfScience ">
+    </div>
+    <div class="form-group my-3">
+        <label asp-for="CandidacyNumber"></label>
+        <input class="form-control" asp-for="CandidacyNumber">
+    </div>
+    <div class="form-group my-3">
+        <label asp-for="DateOfBirth"></label>
+        <input class="form-control" asp-for="DateOfBirth">
+    </div>
+    <div class="form-group my-3">
+        <label asp-for="CandidacyDate"></label>
+        <input class="form-control" asp-for="CandidacyDate">
+        
+    <div class="form-group my-3">
+        
+            <select class="form-control" name="committeeId" asp-items="@(ViewBag.Committees)" required>
+            <option value="">-- Komite Seç --</option>
+        </select>
+            <a asp-controller="Organization" asp-action="Create">Create a new committee</a>
+    </div>
+        <div class="form-group my-3">
+
+            <select class="form-control" name="result" required>
+                <option value="1">True</option>
+                <option value="0">False</option>
+            </select>
+        </div>
+    <div class="form-group my-3">
+         
+        <select class="form-control" name="organizationId" asp-items="@(ViewBag.Organizations)" required>
+            <option value="">-- Organizasyon Seç --</option>
+        </select>
+            <a asp-controller="Organization" asp-action="Create">Create a new organization</a>
+    </div>
+    <div class="form-group my-3">
+
+            <select class="form-control" name="awardId" asp-items="@(ViewBag.Awards)" required>
+            <option value="">-- Ödül Seç --</option>
+                
+             </select>
+            <a asp-controller="Organization" asp-action="Create">Create a new award</a>
+    </div>
+
+
+
+    
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">
+            Add
+        </button>
+    </div>
+</form>

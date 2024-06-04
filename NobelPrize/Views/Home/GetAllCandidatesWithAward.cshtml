@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CandidateWithAward>
+
+<style>
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .table thead th {
+        background-color: #4600FF;
+        color: white;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+
+    @await Component.InvokeAsync("CandidateWithAwardFilter")
+<h2>View Table</h2>
+<div class="row">
+  
+
+    <div class="col-12 table-container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">CandidateId</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Field Of Science</th>
+                    <th scope="col">Nationality</th>
+                    <th scope="col">Candidacy Number</th>
+                    <th scope="col">Award</th>
+                    <th scope ="col">Organization</th>
+                    <th scoper="col">Committee</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.CandidateId</th>
+                        <td>@item.FirstName</td>
+                        <td>@item.FieldOfScience</td>
+                        <td>@item.Nationality</td>
+                        <td>@item.CandidacyNumber</td>
+                        <td>@item.DescriptorName</td>
+                        <td>@item.OrganizationName</td>
+                        <td>@item.Committee</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+  

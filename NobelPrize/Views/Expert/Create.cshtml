@@ -1,0 +1,27 @@
+﻿@model ExpertViewModel
+
+<form asp-action="Create" method="post">
+    <div class="form-group my-3">
+        <label>Expert First Name</label>
+        <input class="form-control" asp-for="ExpertFirstName" required />
+    </div>
+    <div class="form-group my-3">
+        <label>Expert Last Name</label>
+        <input class="form-control" asp-for="ExpertLastName" required />
+    </div>
+    <div class="form-group my-3">
+        <label>Expert Field</label>
+        <input class="form-control" asp-for="ExpertField" required />
+    </div>
+    <div class="form-group my-3">
+        <select class="form-control" name="CommitteeId" asp-items="@(ViewBag.Committees)" required>
+            <option value="">-- Choose The Committee --</option>
+        </select>
+        <a asp-controller="Committee" asp-action="Create">add another commitee</a>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">
+            Add
+        </button>
+    </div>
+</form>

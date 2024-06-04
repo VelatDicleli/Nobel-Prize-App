@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Organization>
+
+<style>
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .table thead th {
+        background-color: #4600FF;
+        color: white;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+<h2>Organizations</h2>
+<a class="btn btn-success" asp-action="Create">Add a new Organization</a>
+<div class="row">
+    <div class="col-12 table-container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Organization Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Contact Info</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.OrganizationId</td>
+                        <td>@item.Name</td>
+                        <td>@item.Location</td>
+                        <td>@item.ContactInformation</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-danger" asp-controller="Organization" asp-action="Delete" asp-route-id="@item.OrganizationId">Remove</a>
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Organization" asp-action="Update" asp-route-id="@item.OrganizationId">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

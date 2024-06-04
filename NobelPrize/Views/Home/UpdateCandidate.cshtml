@@ -1,0 +1,87 @@
+﻿@model CandidateWithAward
+
+<form asp-action="UpdateCandidate" method="post">
+    
+    <input type="hidden" asp-for="CandidateId"/>
+    <input  type="hidden" asp-for="OrganizationId"/>
+    <input type="hidden" asp-for="CommitteeId"/>
+    <input type="hidden" asp-for="AwardId" />
+
+ 
+
+    <div class="form-group my-3">
+        <label asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="LastName"></label>
+        <input class="form-control" asp-for="LastName">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="Nationality"></label>
+        <input class="form-control" asp-for="Nationality">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="FieldOfScience"></label>
+        <input class="form-control" asp-for="FieldOfScience ">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="CandidacyNumber"></label>
+        <input class="form-control" asp-for="CandidacyNumber">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="DateOfBirth"></label>
+        <input class="form-control" asp-for="DateOfBirth">
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="CandidacyDate"></label>
+        <input class="form-control" asp-for="CandidacyDate">
+    </div> 
+        
+    
+    <div class="form-group my-3">
+        
+            <select class="form-control"  name="update_committeeId" asp-items="@(ViewBag.Committees)" required>
+            <option value="">-- Komite Seç --</option>
+        </select>
+    </div>
+    <div class="form-group my-3">
+            <label>Evaluation Date</label>
+        <input class="form-control" type="date" name="update_evaluationDate" required>
+
+    </div>
+    <div class="form-group my-3">
+
+        <select class="form-control" name="update_result" required>
+                <option value="1">True</option>
+                <option value="0">False</option>
+            </select>
+    </div>
+    <div class="form-group my-3">
+
+        <select class="form-control" name="update_organizationId" asp-items="@(ViewBag.Organizations)" required>
+            <option value="">-- Organizasyon Seç --</option>
+        </select>
+    </div>
+    <div class="form-group my-3">
+
+        <select class="form-control" name="update_awardId" asp-items="@(ViewBag.Awards)" required>
+            <option value="">-- Ödül Seç --</option>
+        </select>
+    </div>
+
+
+
+    
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">
+            Edit
+        </button>
+    </div>
+</form>

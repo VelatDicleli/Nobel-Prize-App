@@ -1,0 +1,35 @@
+C:\Users\User\source\repos\NobelPrize\Business\bin\Debug\net8.0\Business.deps.json
+C:\Users\User\source\repos\NobelPrize\Business\bin\Debug\net8.0\Business.dll
+C:\Users\User\source\repos\NobelPrize\Business\bin\Debug\net8.0\Business.pdb
+C:\Users\User\source\repos\NobelPrize\Business\bin\Debug\net8.0\DataAccess.dll
+C:\Users\User\source\repos\NobelPrize\Business\bin\Debug\net8.0\Entities.dll
+C:\Users\User\source\repos\NobelPrize\Business\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\User\source\repos\NobelPrize\Business\bin\Debug\net8.0\Entities.pdb
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.csproj.CopyComplete
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.dll
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\refint\Business.dll
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.pdb
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\ref\Business.dll
+C:\Users\User\source\repos\NobelPrize\Business\obj\Debug\net8.0\Business.sourcelink.json
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\bin\Debug\net8.0\Business.deps.json
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\bin\Debug\net8.0\Business.dll
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\bin\Debug\net8.0\Business.pdb
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\bin\Debug\net8.0\DataAccess.dll
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\bin\Debug\net8.0\Entities.dll
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\bin\Debug\net8.0\Entities.pdb
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.csproj.CopyComplete
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.dll
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\refint\Business.dll
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\Business.pdb
+C:\Users\User\Desktop\NobelPrize - Kopya\Business\obj\Debug\net8.0\ref\Business.dll

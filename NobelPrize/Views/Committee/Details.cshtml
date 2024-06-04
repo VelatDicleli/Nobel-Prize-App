@@ -1,0 +1,73 @@
+﻿@model Committee
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    th {
+        background-color: #4600FF;
+        color: white
+    }
+    h3 {
+        margin-top: 30px;
+    }
+</style>
+
+<h2>Committee Details</h2>
+<table>
+    <tr>
+        <th>Committee Category</th>
+        <td>@Model.CommitteeCategory</td>
+    </tr>
+</table>
+
+<h3>Experts</h3>
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Field</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var expert in Model.Experts)
+        {
+            <tr>
+                <td>@expert.ExpertFirstName</td>
+                <td>@expert.ExpertLastName</td>
+                <td>@expert.ExpertField</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Evaluated Candidates</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Candidate First Name</th>
+            <th>Candidate Last Name</th>
+            <th>Nomination Date</th>
+            <th>Evaluation Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var candidate in Model.CommitteeCandidates)
+        {
+            <tr>
+                <td>@candidate.Candidate.FirstName</td>
+                <td>@candidate.Candidate.LastName</td>
+                <td>@candidate.Candidate.CandidacyDate.ToString("yyyy-MM-dd")</td>
+                <td>@candidate.EvaluationDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

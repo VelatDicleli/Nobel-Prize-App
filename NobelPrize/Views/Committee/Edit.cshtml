@@ -1,0 +1,15 @@
+﻿@model Committee
+
+<form action="Edit" method="post">
+    <input type="hidden" asp-for="CommitteeId"/>
+    <div class="form-group my-3">
+        <label>Committee Category</label>
+        <input class="form-control" asp-for="CommitteeCategory" />
+
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">
+            Edit
+        </button>
+
+</form>

@@ -1,0 +1,45 @@
+﻿@model List<Committee>
+
+<style>
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .table thead th {
+        background-color: #4600FF;
+        color: white;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+<h2>Committees</h2>
+<a class="btn btn-success" asp-action="Create"> Add a new Committee</a>
+<div class="row">
+    <div class="col-12 table-container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Committee Id</th>
+                    <th scope="col">Committee Category</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CommitteeId</td>
+                        <td>@item.CommitteeCategory</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-info" asp-controller="Committee" asp-action="Details" asp-route-id="@item.CommitteeId">Details</a>
+                            <a class="btn btn-sm btn-outline-danger" asp-controller="Committee" asp-action="Remove" asp-route-id="@item.CommitteeId">Remove</a>
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Committee" asp-action="Edit" asp-route-id="@item.CommitteeId">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
